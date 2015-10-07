@@ -20,7 +20,7 @@ var getName = function(req,res){
 };
 
 var notFound = function(req,res){
-	res.status(404).sendFile(__dirname + "../../../views/notFound.html"); 
+	res.status(404).sendFile(path.resolve(__dirname + "../../../views/notFound.html")); 
 };
 
 var setName = function(req,res){
@@ -31,7 +31,7 @@ var setName = function(req,res){
 	
 	name = req.body.firstname + " " + req.body.lastname;
 	
-	res.json({name:name});
+	res.json({name:"name"});
 	
 };
 
