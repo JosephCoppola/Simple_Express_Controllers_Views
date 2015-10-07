@@ -8,6 +8,9 @@ var router = function(app){
 	app.get('/',controllers.index);
 	
 	app.get('/*',controllers.notFound);
+	
+	app.post('/setName',controllers.setName);
+	
 };
 
 module.exports = router;
